@@ -35,5 +35,6 @@ namespace Formularios
             formVenta.ShowDialog();
             this.Close();
         }
+
     }
 }

@@ -31,7 +31,12 @@
             this.lstProductos = new System.Windows.Forms.ListBox();
             this.btnSumarStock = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.cmbAgregar = new System.Windows.Forms.ComboBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.agregarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.celularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.televisorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstProductos
@@ -63,29 +68,64 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // cmbAgregar
+            // menuStrip1
             // 
-            this.cmbAgregar.FormattingEnabled = true;
-            this.cmbAgregar.Location = new System.Drawing.Point(81, 382);
-            this.cmbAgregar.Name = "cmbAgregar";
-            this.cmbAgregar.Size = new System.Drawing.Size(151, 28);
-            this.cmbAgregar.TabIndex = 5;
-            this.cmbAgregar.Text = "Agregar Producto";
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarProductoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // agregarProductoToolStripMenuItem
+            // 
+            this.agregarProductoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.celularToolStripMenuItem,
+            this.pCToolStripMenuItem,
+            this.televisorToolStripMenuItem});
+            this.agregarProductoToolStripMenuItem.Name = "agregarProductoToolStripMenuItem";
+            this.agregarProductoToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.agregarProductoToolStripMenuItem.Text = "Agregar producto";
+            // 
+            // celularToolStripMenuItem
+            // 
+            this.celularToolStripMenuItem.Name = "celularToolStripMenuItem";
+            this.celularToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.celularToolStripMenuItem.Text = "Celular";
+            this.celularToolStripMenuItem.Click += new System.EventHandler(this.celularToolStripMenuItem_Click);
+            // 
+            // pCToolStripMenuItem
+            // 
+            this.pCToolStripMenuItem.Name = "pCToolStripMenuItem";
+            this.pCToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pCToolStripMenuItem.Text = "PC";
+            // 
+            // televisorToolStripMenuItem
+            // 
+            this.televisorToolStripMenuItem.Name = "televisorToolStripMenuItem";
+            this.televisorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.televisorToolStripMenuItem.Text = "Televisor";
             // 
             // FrmAdminInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cmbAgregar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnSumarStock);
             this.Controls.Add(this.lstProductos);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmAdminInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador de Inventario";
             this.Load += new System.EventHandler(this.FrmAdminInventario_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -94,6 +134,10 @@
         private System.Windows.Forms.ListBox lstProductos;
         private System.Windows.Forms.Button btnSumarStock;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.ComboBox cmbAgregar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem agregarProductoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem celularToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem televisorToolStripMenuItem;
     }
 }

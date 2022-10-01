@@ -24,3 +24,5 @@ C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\
 C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmVenta.resources
 C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmListado.resources
 C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmNuevoProducto.resources
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmCelular.resources
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmConfirmarVenta.resources

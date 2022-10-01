@@ -129,10 +129,6 @@ namespace Biblioteca
                     else if (!esSuma)
                     {
                         item.Stock--;
-                        if(item.Stock == 0)
-                        {
-                            d.Productos.Remove(item);
-                        }
                         return true;
                     }
                 }

@@ -83,6 +83,7 @@ namespace Biblioteca
                 existe = p.ModificarStock(d, false);
                 if (!existe)
                 {
+                    
                     d.productos.Add(p);
                 }
             }

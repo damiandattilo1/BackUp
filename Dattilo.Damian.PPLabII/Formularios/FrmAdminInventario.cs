@@ -24,10 +24,6 @@ namespace Formularios
         {
             CargarDatos();
 
-            cmbAgregar.Items.Clear();
-            cmbAgregar.Items.Add("Celular");
-            cmbAgregar.Items.Add("PC");
-            cmbAgregar.Items.Add("Televisor");
         }
                 
 
@@ -60,5 +56,9 @@ namespace Formularios
             }
         }
 
+        private void celularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

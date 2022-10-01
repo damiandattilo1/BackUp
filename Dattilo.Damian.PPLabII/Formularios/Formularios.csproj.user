@@ -4,6 +4,12 @@
     <Compile Update="FrmAdminInventario.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmCelular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmConfirmarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmListado.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -33,5 +33,21 @@ namespace Formularios
                 lstProductos.Items.Add(item);
             }
         }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            if (lstProductos.SelectedItem is not null)
+            {
+                FrmConfirmarVenta confirmar = new FrmConfirmarVenta(lstProductos.SelectedItem as Producto);
+                this.Hide();
+                confirmar.ShowDialog();
+                CargarDatos();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un producto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

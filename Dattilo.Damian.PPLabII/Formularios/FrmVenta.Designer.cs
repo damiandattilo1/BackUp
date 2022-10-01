@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lstProductos = new System.Windows.Forms.ListBox();
+            this.btnVender = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstProductos
@@ -40,12 +41,23 @@
             this.lstProductos.Size = new System.Drawing.Size(918, 344);
             this.lstProductos.TabIndex = 0;
             // 
+            // btnVender
+            // 
+            this.btnVender.Location = new System.Drawing.Point(152, 412);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(213, 57);
+            this.btnVender.TabIndex = 2;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
+            // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(973, 498);
+            this.Controls.Add(this.btnVender);
             this.Controls.Add(this.lstProductos);
             this.Name = "FrmVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -58,5 +70,6 @@
         #endregion
 
         private System.Windows.Forms.ListBox lstProductos;
+        private System.Windows.Forms.Button btnVender;
     }
 }
