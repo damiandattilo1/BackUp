@@ -117,23 +117,30 @@ namespace Biblioteca
         /// <returns></returns> Indica si el producto se encontro y se pudo sumar o restar el stock
         public bool ModificarStock(Deposito d, bool esSuma)
         {
-            if(d is not null)
+            Producto producto = BuscarProducto(d);
+            if(d is not null && producto is not null && esSuma)
             {
-                foreach(Producto item in d.Productos)
-                {
-                    if(item == this && esSuma)
-                    {
-                        item.Stock++;
-                        return true;
-                    }
-                    else if (!esSuma)
-                    {
-                        item.Stock--;
-                        return true;
-                    }
-                }
+                producto.Stock++; 
+                return true;
+            }
+            else if(!esSuma)
+            {
+                producto.Stock--;
+                return true;
             }
             return false;
+        }
+
+        private Producto BuscarProducto(Deposito deposito)
+        {
+            foreach(Producto item in deposito.Productos)
+            {
+                if(item == this)
+                {
+                    return item;
+                }
+            }
+            return null;
         }
 
 

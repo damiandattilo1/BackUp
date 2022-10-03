@@ -30,10 +30,10 @@ namespace Formularios
 
         private void btnVenta_Click(object sender, EventArgs e)
         {
-            FrmVenta formVenta = new FrmVenta(deposito);
+            FrmVenta formVenta = new FrmVenta(deposito, true);
             this.Hide();
             formVenta.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
     }

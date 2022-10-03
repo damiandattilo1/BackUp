@@ -56,9 +56,14 @@ namespace Formularios
             }
         }
 
-        private void celularToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            FrmNuevoProducto frmNuevo = new FrmNuevoProducto(deposito);
+            this.Hide();
+            frmNuevo.ShowDialog();
+            CargarDatos();
+            this.Show();
         }
     }
 }

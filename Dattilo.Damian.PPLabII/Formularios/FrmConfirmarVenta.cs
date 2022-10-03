@@ -24,5 +24,11 @@ namespace Formularios
         {
             rtbMostrarProducto.Text = producto.ToString();
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            producto.Stock--;
+            this.Close();
+        }
     }
 }

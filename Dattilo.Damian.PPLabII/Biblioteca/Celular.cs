@@ -46,6 +46,8 @@ namespace Biblioteca
             set { esLiberado = value; }
         }
 
+        
+
         /// <summary>
         /// Constructor publico de celular que reutiliza el constructor de la clase base
         /// </summary>

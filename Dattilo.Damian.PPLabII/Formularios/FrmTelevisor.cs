@@ -1,0 +1,87 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Biblioteca;
+
+namespace Formularios
+{
+    public partial class FrmTelevisor : Form
+    {
+        private Deposito deposito;
+
+        public FrmTelevisor(Deposito deposito)
+        {
+            InitializeComponent();
+            this.deposito = deposito;
+        }
+
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            bool esSmart;
+            if(cmbSmart.Text == "Si")
+            {
+                esSmart =true;
+            }
+            else
+            {
+                esSmart =false;
+            }
+            if (Validar())
+            {
+                Televisor televisor = new Televisor(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, double.Parse(txtPrecio.Text), int.Parse(txtPulgadas.Text), (eSistemaTV)cmbSistema.SelectedItem, (eResolucion)cmbResolucion.SelectedItem, esSmart);
+                deposito = deposito + televisor;
+                MessageBox.Show("Se ha agregado el televisor exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                MessageBox.Show("Ingrese correctamente los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private bool Validar()
+        {
+            int auxInt;
+            double auxDouble;
+
+            if (int.TryParse(txtId.Text, out auxInt) && double.TryParse(txtPrecio.Text, out auxDouble) && int.TryParse(txtPulgadas.Text, out auxInt))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void FrmTelevisor_Load(object sender, EventArgs e)
+        {
+            cmbMarca.Items.Clear();
+            cmbResolucion.Items.Clear();
+            cmbSistema.Items.Clear();
+            cmbSmart.Items.Clear();
+
+            cmbSmart.Items.Add("Si");
+            cmbSmart.Items.Add("No");
+
+            cmbMarca.Items.Add(eMarca.Sony);
+            cmbMarca.Items.Add(eMarca.HP);
+            cmbMarca.Items.Add(eMarca.Samsung);
+            cmbMarca.Items.Add(eMarca.Philips);
+
+            cmbResolucion.Items.Add(eResolucion.Standard);
+            cmbResolucion.Items.Add(eResolucion.HD);
+            cmbResolucion.Items.Add(eResolucion.UHD);
+
+            cmbSistema.Items.Add(eSistemaTV.AndroidTV);
+            cmbSistema.Items.Add(eSistemaTV.Linux);
+            cmbSistema.Items.Add(eSistemaTV.Tizen);
+        }
+    }
+}

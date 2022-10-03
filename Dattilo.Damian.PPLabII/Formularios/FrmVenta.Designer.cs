@@ -30,6 +30,7 @@
         {
             this.lstProductos = new System.Windows.Forms.ListBox();
             this.btnVender = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstProductos
@@ -51,12 +52,23 @@
             this.btnVender.UseVisualStyleBackColor = true;
             this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(644, 412);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(204, 57);
+            this.btnVolver.TabIndex = 3;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(973, 498);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.lstProductos);
             this.Name = "FrmVenta";
@@ -71,5 +83,6 @@
 
         private System.Windows.Forms.ListBox lstProductos;
         private System.Windows.Forms.Button btnVender;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

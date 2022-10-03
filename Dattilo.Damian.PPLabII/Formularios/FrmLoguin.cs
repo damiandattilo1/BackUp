@@ -40,7 +40,7 @@ namespace Formularios
             else if (txtUsuario.Text == "vendedor@vende.com" && txtPassword.Text == "444ven555")
             {
                 this.Hide();
-                FrmVenta frmVenta = new FrmVenta(deposito);
+                FrmVenta frmVenta = new FrmVenta(deposito, false);
                 frmVenta.ShowDialog();
                 this.Close();
             }

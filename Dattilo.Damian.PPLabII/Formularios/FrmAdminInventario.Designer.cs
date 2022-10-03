@@ -36,6 +36,7 @@
             this.celularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.televisorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,27 +93,38 @@
             // celularToolStripMenuItem
             // 
             this.celularToolStripMenuItem.Name = "celularToolStripMenuItem";
-            this.celularToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.celularToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.celularToolStripMenuItem.Text = "Celular";
-            this.celularToolStripMenuItem.Click += new System.EventHandler(this.celularToolStripMenuItem_Click);
             // 
             // pCToolStripMenuItem
             // 
             this.pCToolStripMenuItem.Name = "pCToolStripMenuItem";
-            this.pCToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pCToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.pCToolStripMenuItem.Text = "PC";
             // 
             // televisorToolStripMenuItem
             // 
             this.televisorToolStripMenuItem.Name = "televisorToolStripMenuItem";
-            this.televisorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.televisorToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.televisorToolStripMenuItem.Text = "Televisor";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(115, 367);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(148, 58);
+            this.btnNuevo.TabIndex = 7;
+            this.btnNuevo.Text = "Nuevo Producto";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // FrmAdminInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnSumarStock);
             this.Controls.Add(this.lstProductos);
@@ -139,5 +151,6 @@
         private System.Windows.Forms.ToolStripMenuItem celularToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pCToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem televisorToolStripMenuItem;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }

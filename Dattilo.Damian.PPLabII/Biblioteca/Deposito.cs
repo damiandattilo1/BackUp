@@ -74,20 +74,12 @@ namespace Biblioteca
         /// <param name="d"></param>
         /// <param name="p"></param>
         /// <returns></returns>
-        public static Deposito operator -(Deposito d, Producto p)
+        //public static Deposito operator -(Deposito d, Producto p)
+        public static bool operator -(Deposito d, Producto p)
         {
-            bool existe;
+            bool existe = p.ModificarStock(d, false);
 
-            if (d is not null && p is not null)
-            {
-                existe = p.ModificarStock(d, false);
-                if (!existe)
-                {
-                    
-                    d.productos.Add(p);
-                }
-            }
-            return d;
+            return existe;
         }
 
         public string GenerarFactura(Producto p)

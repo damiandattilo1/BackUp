@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\usu\\Desktop\\PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\Biblioteca.csproj": {}
+    "C:\\Users\\usu\\Desktop\\Personal PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\Biblioteca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\usu\\Desktop\\PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\Biblioteca.csproj": {
+    "C:\\Users\\usu\\Desktop\\Personal PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\usu\\Desktop\\PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\Biblioteca.csproj",
+        "projectUniqueName": "C:\\Users\\usu\\Desktop\\Personal PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "C:\\Users\\usu\\Desktop\\PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\Biblioteca.csproj",
+        "projectPath": "C:\\Users\\usu\\Desktop\\Personal PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\Biblioteca.csproj",
         "packagesPath": "C:\\Users\\usu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usu\\Desktop\\PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\obj\\",
+        "outputPath": "C:\\Users\\usu\\Desktop\\Personal PPLabII 2 cuat 2022\\Dattilo.Damian.PPLabII\\Biblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\usu\\AppData\\Roaming\\NuGet\\NuGet.Config",
