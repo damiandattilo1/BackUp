@@ -25,7 +25,7 @@ namespace Formularios
             cmbDisco.Items.Clear();
             cmbMarca.Items.Clear();
             cmbSistOp.Items.Clear();
-            
+            cmbTag.Items.Clear();
 
             cmbDisco.Items.Add(eDisco.SSD);
             cmbDisco.Items.Add(eDisco.HDD);
@@ -37,6 +37,10 @@ namespace Formularios
 
             cmbSistOp.Items.Add(eSistemaPC.Linux);
             cmbSistOp.Items.Add(eSistemaPC.Windows);
+
+            cmbTag.Items.Add(eTag.Audiovisual);
+            cmbTag.Items.Add(eTag.Telefonia);
+            cmbTag.Items.Add(eTag.Informatica);
         }
 
        
@@ -45,7 +49,7 @@ namespace Formularios
         {
             if (Validar())
             {
-                PC pc = new PC(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, double.Parse(txtPrecio.Text), int.Parse(txtMemoriaDisco.Text), int.Parse(txtMemoriaRam.Text),(eSistemaPC)cmbSistOp.SelectedItem, (eDisco)cmbDisco.SelectedItem);
+                PC pc = new PC(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txtMemoriaDisco.Text), int.Parse(txtMemoriaRam.Text),(eSistemaPC)cmbSistOp.SelectedItem, (eDisco)cmbDisco.SelectedItem);
                 deposito = deposito + pc;
                 MessageBox.Show("Se ha agregado la PC exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -60,7 +64,7 @@ namespace Formularios
             int auxInt;
             double auxDouble;
 
-            if (int.TryParse(txtId.Text, out auxInt) && double.TryParse(txtPrecio.Text, out auxDouble) && int.TryParse(txtMemoriaDisco.Text, out auxInt) && int.TryParse(txtMemoriaRam.Text, out auxInt))
+            if (int.TryParse(txtId.Text, out auxInt) && double.TryParse(txtPrecio.Text, out auxDouble) && int.TryParse(txtMemoriaDisco.Text, out auxInt) && int.TryParse(txtMemoriaRam.Text, out auxInt) && cmbDisco is not null && cmbMarca is not null && cmbSistOp is not null && cmbTag is not null)
             {
                 return true;
             }

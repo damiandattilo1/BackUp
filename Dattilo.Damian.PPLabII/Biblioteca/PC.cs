@@ -43,7 +43,7 @@ namespace Biblioteca
             set { disco = value; }
         }
 
-        public PC(int id, eMarca marca, string modelo, double precio, int memoriaDisco, int ram, eSistemaPC sistemaOperativo, eDisco disco) : base(id, marca, modelo, precio)
+        public PC(int id, eMarca marca, string modelo, eTag tag, double precio, int memoriaDisco, int ram, eSistemaPC sistemaOperativo, eDisco disco) : base(id, marca, modelo,tag,  precio)
         {
             this.memoriaDisco = memoriaDisco;
             this.ram = ram;
@@ -67,6 +67,30 @@ namespace Biblioteca
             sb.AppendLine($"Disco: {this.Disco.ToString()}");
 
             return sb.ToString();
+        }
+
+        public static bool operator ==(PC pc1, PC pc2)
+        {
+            if(pc1 is not null && pc2 is not null)
+            {
+                return (Producto)pc1 == (Producto)pc2 && pc1.Modelo == pc2.Modelo;
+            }
+            return false;
+        }
+
+        public static bool operator !=(PC pc1, PC pc2)
+        {
+            return !(pc1 == pc2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+            if (obj is not null && obj is PC)
+            {
+                retorno = ((PC)obj == this);
+            }
+            return retorno;
         }
     }
 }

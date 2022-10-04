@@ -25,7 +25,7 @@ namespace Formularios
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             bool esSmart;
-            if(cmbSmart.Text == "Si")
+            if(cmbSmart.Text == "Si" && Validar())
             {
                 esSmart =true;
             }
@@ -35,7 +35,7 @@ namespace Formularios
             }
             if (Validar())
             {
-                Televisor televisor = new Televisor(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, double.Parse(txtPrecio.Text), int.Parse(txtPulgadas.Text), (eSistemaTV)cmbSistema.SelectedItem, (eResolucion)cmbResolucion.SelectedItem, esSmart);
+                Televisor televisor = new Televisor(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txtPulgadas.Text), (eSistemaTV)cmbSistema.SelectedItem, (eResolucion)cmbResolucion.SelectedItem, esSmart);
                 deposito = deposito + televisor;
                 MessageBox.Show("Se ha agregado el televisor exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -52,7 +52,7 @@ namespace Formularios
             int auxInt;
             double auxDouble;
 
-            if (int.TryParse(txtId.Text, out auxInt) && double.TryParse(txtPrecio.Text, out auxDouble) && int.TryParse(txtPulgadas.Text, out auxInt))
+            if (int.TryParse(txtId.Text, out auxInt) && double.TryParse(txtPrecio.Text, out auxDouble) && int.TryParse(txtPulgadas.Text, out auxInt) && cmbMarca is not null && cmbResolucion is not null && cmbSistema is not null && cmbSmart is not null && cmbTag is not null)
             {
                 return true;
             }
@@ -66,6 +66,7 @@ namespace Formularios
             cmbResolucion.Items.Clear();
             cmbSistema.Items.Clear();
             cmbSmart.Items.Clear();
+            cmbTag.Items.Clear();
 
             cmbSmart.Items.Add("Si");
             cmbSmart.Items.Add("No");
@@ -82,6 +83,10 @@ namespace Formularios
             cmbSistema.Items.Add(eSistemaTV.AndroidTV);
             cmbSistema.Items.Add(eSistemaTV.Linux);
             cmbSistema.Items.Add(eSistemaTV.Tizen);
+
+            cmbTag.Items.Add(eTag.Audiovisual);
+            cmbTag.Items.Add(eTag.Telefonia);
+            cmbTag.Items.Add(eTag.Informatica);
         }
     }
 }

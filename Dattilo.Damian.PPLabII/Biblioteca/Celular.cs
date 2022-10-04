@@ -57,7 +57,7 @@ namespace Biblioteca
         /// <param name="precio"></param>
         /// <param name="memoria"></param>
         /// <param name="esLiberado"></param>
-        public Celular(int id, eMarca marca, string modelo, double precio, int memoria,eSistemaCelular sistemaOperativo, eResolucionCamara resolucionCamara, bool esLiberado) : base(id, marca, modelo, precio)
+        public Celular(int id, eMarca marca, string modelo, eTag tag, double precio, int memoria,eSistemaCelular sistemaOperativo, eResolucionCamara resolucionCamara, bool esLiberado) : base(id, marca, modelo,tag, precio)
         {
             this.memoria = memoria;
             this.sistemaOperativo = sistemaOperativo;
@@ -89,6 +89,30 @@ namespace Biblioteca
             }
 
             return sb.ToString();
+        }
+
+        public static bool operator ==(Celular celular1, Celular celular2)
+        {
+            if (celular1 is not null && celular2 is not null)
+            {
+                return (Producto)celular1 == (Producto)celular2 && celular1.Modelo == celular2.Modelo;
+            }
+            return false;
+        }
+
+        public static bool operator !=(Celular celular1, Celular celular2)
+        {
+            return !(celular1 == celular2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+            if (obj is not null && obj is Celular)
+            {
+                retorno = ((Celular)obj == this);
+            }
+            return retorno;
         }
     }
 }

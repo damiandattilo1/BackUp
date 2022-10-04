@@ -45,10 +45,14 @@
             this.cmbSistOp = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbTag = new System.Windows.Forms.ComboBox();
+            this.lblPC = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbDisco
             // 
+            this.cmbDisco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDisco.FormattingEnabled = true;
             this.cmbDisco.Location = new System.Drawing.Point(319, 515);
             this.cmbDisco.Name = "cmbDisco";
@@ -57,6 +61,7 @@
             // 
             // cmbMarca
             // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(319, 109);
             this.cmbMarca.Name = "cmbMarca";
@@ -163,6 +168,7 @@
             // 
             // cmbSistOp
             // 
+            this.cmbSistOp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSistOp.FormattingEnabled = true;
             this.cmbSistOp.Location = new System.Drawing.Point(319, 444);
             this.cmbSistOp.Name = "cmbSistOp";
@@ -188,12 +194,43 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(374, 560);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Tag";
+            // 
+            // cmbTag
+            // 
+            this.cmbTag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTag.FormattingEnabled = true;
+            this.cmbTag.Location = new System.Drawing.Point(319, 583);
+            this.cmbTag.Name = "cmbTag";
+            this.cmbTag.Size = new System.Drawing.Size(151, 28);
+            this.cmbTag.TabIndex = 21;
+            // 
+            // lblPC
+            // 
+            this.lblPC.AutoSize = true;
+            this.lblPC.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPC.Location = new System.Drawing.Point(51, 46);
+            this.lblPC.Name = "lblPC";
+            this.lblPC.Size = new System.Drawing.Size(181, 50);
+            this.lblPC.TabIndex = 22;
+            this.lblPC.Text = "Nueva PC";
+            // 
             // FrmPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(843, 571);
+            this.ClientSize = new System.Drawing.Size(843, 623);
+            this.Controls.Add(this.lblPC);
+            this.Controls.Add(this.cmbTag);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbSistOp);
@@ -238,5 +275,8 @@
         private System.Windows.Forms.ComboBox cmbSistOp;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbTag;
+        private System.Windows.Forms.Label lblPC;
     }
 }

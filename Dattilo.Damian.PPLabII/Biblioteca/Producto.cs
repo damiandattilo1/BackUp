@@ -16,6 +16,7 @@ namespace Biblioteca
         private double precio;
         private string modelo;
         private int stock;
+        private eTag tag;
 
 
         /// <summary>
@@ -50,6 +51,13 @@ namespace Biblioteca
             get { return stock; }
             set { stock = value; }
         }
+
+        public eTag Tag
+        {
+            get { return tag; }
+            set { tag = value; }
+        }
+
         /// <summary>
         /// Constructor privado que inicializa el stock
         /// </summary>
@@ -64,11 +72,12 @@ namespace Biblioteca
         /// <param name="marca"></param>
         /// <param name="modelo"></param>
         /// <param name="precio"></param>
-        public Producto(int id, eMarca marca, string modelo, double precio) :this()
+        public Producto(int id, eMarca marca, string modelo, eTag tag, double precio) :this()
         {
             this.id = id;
             this.marca = marca;
             this.modelo = modelo;
+            this.tag = tag;
             this.precio = precio;
         }
        
@@ -99,7 +108,7 @@ namespace Biblioteca
         {
             if (p1 is not null && p2 is not null)
             {
-                return p1.Id == p2.Id && p1.Modelo == p2.Modelo;
+                return p1.Id == p2.Id;
             }
             return false;
         }
@@ -113,7 +122,7 @@ namespace Biblioteca
         /// Busca un producto en un deposito y suma o resta el stock (segun el booleano recibido por parametro). Cuando el stock llega a cero, se elimina el producto del deposito
         /// </summary>
         /// <param name="d"></param> Deposito 
-        /// <param name="esSuma"></param> Booleano que indica si el stock se debe sumar o restar
+        /// <param name="esSuma"></param> Booleano que contiene true si el stock se debe sumar o false si el stock se debe restar
         /// <returns></returns> Indica si el producto se encontro y se pudo sumar o restar el stock
         public bool ModificarStock(Deposito d, bool esSuma)
         {
@@ -133,11 +142,14 @@ namespace Biblioteca
 
         private Producto BuscarProducto(Deposito deposito)
         {
-            foreach(Producto item in deposito.Productos)
+            if(deposito is not null)
             {
-                if(item == this)
+                foreach(Producto item in deposito.Productos)
                 {
-                    return item;
+                    if(item == this)
+                    {
+                        return item;
+                    }
                 }
             }
             return null;

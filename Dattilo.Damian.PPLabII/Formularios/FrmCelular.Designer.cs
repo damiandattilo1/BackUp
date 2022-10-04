@@ -31,25 +31,28 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.cmbMarca = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.lblModelo = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblMemoria = new System.Windows.Forms.Label();
+            this.lblSistema = new System.Windows.Forms.Label();
+            this.lblResolucion = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtMemoria = new System.Windows.Forms.TextBox();
             this.cmbSistema = new System.Windows.Forms.ComboBox();
             this.cmbResolucion = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.cmbLiberado = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblLiberado = new System.Windows.Forms.Label();
+            this.cmbTag = new System.Windows.Forms.ComboBox();
+            this.lblTag = new System.Windows.Forms.Label();
+            this.lblCelular = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(24, 175);
+            this.txtId.Location = new System.Drawing.Point(28, 175);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(125, 27);
             this.txtId.TabIndex = 0;
@@ -69,79 +72,79 @@
             this.cmbMarca.Size = new System.Drawing.Size(151, 28);
             this.cmbMarca.TabIndex = 2;
             // 
-            // label1
+            // lblId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Id";
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(50, 135);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(22, 20);
+            this.lblId.TabIndex = 3;
+            this.lblId.Text = "Id";
             // 
-            // label2
+            // lblMarca
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 135);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Marca";
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Location = new System.Drawing.Point(204, 135);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(50, 20);
+            this.lblMarca.TabIndex = 4;
+            this.lblMarca.Text = "Marca";
             // 
-            // label3
+            // lblModelo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(362, 139);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Modelo";
+            this.lblModelo.AutoSize = true;
+            this.lblModelo.Location = new System.Drawing.Point(362, 139);
+            this.lblModelo.Name = "lblModelo";
+            this.lblModelo.Size = new System.Drawing.Size(61, 20);
+            this.lblModelo.TabIndex = 5;
+            this.lblModelo.Text = "Modelo";
             // 
-            // label4
+            // lblPrecio
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(524, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Precio";
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(501, 139);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(50, 20);
+            this.lblPrecio.TabIndex = 6;
+            this.lblPrecio.Text = "Precio";
             // 
-            // label5
+            // lblMemoria
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(641, 139);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Memoria";
+            this.lblMemoria.AutoSize = true;
+            this.lblMemoria.Location = new System.Drawing.Point(657, 139);
+            this.lblMemoria.Name = "lblMemoria";
+            this.lblMemoria.Size = new System.Drawing.Size(69, 20);
+            this.lblMemoria.TabIndex = 7;
+            this.lblMemoria.Text = "Memoria";
             // 
-            // label6
+            // lblSistema
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(885, 139);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Sistema";
+            this.lblSistema.AutoSize = true;
+            this.lblSistema.Location = new System.Drawing.Point(834, 139);
+            this.lblSistema.Name = "lblSistema";
+            this.lblSistema.Size = new System.Drawing.Size(61, 20);
+            this.lblSistema.TabIndex = 8;
+            this.lblSistema.Text = "Sistema";
             // 
-            // label7
+            // lblResolucion
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1126, 138);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 20);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Resolucion";
+            this.lblResolucion.AutoSize = true;
+            this.lblResolucion.Location = new System.Drawing.Point(995, 132);
+            this.lblResolucion.Name = "lblResolucion";
+            this.lblResolucion.Size = new System.Drawing.Size(81, 20);
+            this.lblResolucion.TabIndex = 9;
+            this.lblResolucion.Text = "Resolucion";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(486, 176);
+            this.txtPrecio.Location = new System.Drawing.Point(472, 175);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(125, 27);
             this.txtPrecio.TabIndex = 10;
             // 
             // txtMemoria
             // 
-            this.txtMemoria.Location = new System.Drawing.Point(664, 175);
+            this.txtMemoria.Location = new System.Drawing.Point(641, 175);
             this.txtMemoria.Name = "txtMemoria";
             this.txtMemoria.Size = new System.Drawing.Size(125, 27);
             this.txtMemoria.TabIndex = 11;
@@ -149,7 +152,7 @@
             // cmbSistema
             // 
             this.cmbSistema.FormattingEnabled = true;
-            this.cmbSistema.Location = new System.Drawing.Point(836, 180);
+            this.cmbSistema.Location = new System.Drawing.Point(795, 174);
             this.cmbSistema.Name = "cmbSistema";
             this.cmbSistema.Size = new System.Drawing.Size(151, 28);
             this.cmbSistema.TabIndex = 12;
@@ -157,7 +160,7 @@
             // cmbResolucion
             // 
             this.cmbResolucion.FormattingEnabled = true;
-            this.cmbResolucion.Location = new System.Drawing.Point(1100, 180);
+            this.cmbResolucion.Location = new System.Drawing.Point(969, 174);
             this.cmbResolucion.Name = "cmbResolucion";
             this.cmbResolucion.Size = new System.Drawing.Size(151, 28);
             this.cmbResolucion.TabIndex = 13;
@@ -175,19 +178,46 @@
             // cmbLiberado
             // 
             this.cmbLiberado.FormattingEnabled = true;
-            this.cmbLiberado.Location = new System.Drawing.Point(578, 293);
+            this.cmbLiberado.Location = new System.Drawing.Point(362, 300);
             this.cmbLiberado.Name = "cmbLiberado";
             this.cmbLiberado.Size = new System.Drawing.Size(151, 28);
             this.cmbLiberado.TabIndex = 18;
             // 
-            // label8
+            // lblLiberado
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(625, 252);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 20);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Es liberado?";
+            this.lblLiberado.AutoSize = true;
+            this.lblLiberado.Location = new System.Drawing.Point(409, 259);
+            this.lblLiberado.Name = "lblLiberado";
+            this.lblLiberado.Size = new System.Drawing.Size(90, 20);
+            this.lblLiberado.TabIndex = 19;
+            this.lblLiberado.Text = "Es liberado?";
+            // 
+            // cmbTag
+            // 
+            this.cmbTag.FormattingEnabled = true;
+            this.cmbTag.Location = new System.Drawing.Point(710, 289);
+            this.cmbTag.Name = "cmbTag";
+            this.cmbTag.Size = new System.Drawing.Size(151, 28);
+            this.cmbTag.TabIndex = 20;
+            // 
+            // lblTag
+            // 
+            this.lblTag.AutoSize = true;
+            this.lblTag.Location = new System.Drawing.Point(774, 246);
+            this.lblTag.Name = "lblTag";
+            this.lblTag.Size = new System.Drawing.Size(32, 20);
+            this.lblTag.TabIndex = 21;
+            this.lblTag.Text = "Tag";
+            // 
+            // lblCelular
+            // 
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCelular.Location = new System.Drawing.Point(537, 44);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(253, 50);
+            this.lblCelular.TabIndex = 22;
+            this.lblCelular.Text = "Nuevo Celular";
             // 
             // FrmCelular
             // 
@@ -195,20 +225,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1356, 509);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblCelular);
+            this.Controls.Add(this.lblTag);
+            this.Controls.Add(this.cmbTag);
+            this.Controls.Add(this.lblLiberado);
             this.Controls.Add(this.cmbLiberado);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.cmbResolucion);
             this.Controls.Add(this.cmbSistema);
             this.Controls.Add(this.txtMemoria);
             this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblResolucion);
+            this.Controls.Add(this.lblSistema);
+            this.Controls.Add(this.lblMemoria);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.lblModelo);
+            this.Controls.Add(this.lblMarca);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.cmbMarca);
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.txtId);
@@ -226,19 +259,22 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.ComboBox cmbMarca;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.Label lblModelo;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Label lblMemoria;
+        private System.Windows.Forms.Label lblSistema;
+        private System.Windows.Forms.Label lblResolucion;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtMemoria;
         private System.Windows.Forms.ComboBox cmbSistema;
         private System.Windows.Forms.ComboBox cmbResolucion;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ComboBox cmbLiberado;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblLiberado;
+        private System.Windows.Forms.ComboBox cmbTag;
+        private System.Windows.Forms.Label lblTag;
+        private System.Windows.Forms.Label lblCelular;
     }
 }

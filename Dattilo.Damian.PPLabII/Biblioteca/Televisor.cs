@@ -56,7 +56,7 @@ namespace Biblioteca
         /// <param name="pulgadas"></param>
         /// <param name="sistemaOperativo"></param>
         /// <param name="resolucion"></param>
-        public Televisor(int id, eMarca marca, string modelo, double precio, int pulgadas, eSistemaTV sistemaOperativo, eResolucion resolucion, bool esSmart) : base(id, marca, modelo, precio)
+        public Televisor(int id, eMarca marca, string modelo,eTag tag, double precio, int pulgadas, eSistemaTV sistemaOperativo, eResolucion resolucion, bool esSmart) : base(id, marca, modelo, tag, precio)
         {
             this.pulgadas = pulgadas;
             this.sistemaOperativo = sistemaOperativo;
@@ -88,6 +88,30 @@ namespace Biblioteca
             }
 
             return sb.ToString();
+        }
+
+        public static bool operator ==(Televisor t1, Televisor t2)
+        {
+            if(t1 is not null && t2 is not null)
+            {
+                return (Producto)t1 == (Producto)t2 && t1.Modelo == t2.Modelo;
+            }
+            return false;
+        }
+
+        public static bool operator !=(Televisor t1, Televisor t2)
+        {
+            return !(t1 == t2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+            if(obj is not null && obj is Televisor)
+            {
+                retorno = ((Televisor)obj == this);
+            }
+            return retorno;
         }
     }
 }

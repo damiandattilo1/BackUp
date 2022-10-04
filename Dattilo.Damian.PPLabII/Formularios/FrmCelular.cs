@@ -26,6 +26,7 @@ namespace Formularios
             cmbResolucion.Items.Clear();
             cmbSistema.Items.Clear();
             cmbLiberado.Items.Clear();
+            cmbTag.Items.Clear();
 
             cmbMarca.Items.Add(eMarca.Sony);
             cmbMarca.Items.Add(eMarca.HP);
@@ -43,12 +44,16 @@ namespace Formularios
             cmbLiberado.Items.Add("Si");
             cmbLiberado.Items.Add("No");
 
+            cmbTag.Items.Add(eTag.Audiovisual);
+            cmbTag.Items.Add(eTag.Informatica);
+            cmbTag.Items.Add(eTag.Telefonia);
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             bool liberado;
-            if(cmbLiberado.Text == "Si")
+            if(cmbLiberado.Text == "Si" && Validar())
             {
                 liberado = true;
             }
@@ -58,7 +63,7 @@ namespace Formularios
             }
             if (Validar())
             {
-                Celular celular = new Celular(int.Parse(txtId.Text),(eMarca) cmbMarca.SelectedItem, txtModelo.Text, double.Parse(txtPrecio.Text),int.Parse(txtMemoria.Text), (eSistemaCelular)cmbSistema.SelectedItem,(eResolucionCamara) cmbResolucion.SelectedItem, liberado);
+                Celular celular = new Celular(int.Parse(txtId.Text),(eMarca) cmbMarca.SelectedItem, txtModelo.Text,(eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text),int.Parse(txtMemoria.Text), (eSistemaCelular)cmbSistema.SelectedItem,(eResolucionCamara) cmbResolucion.SelectedItem, liberado);
                 deposito = deposito + celular;
                 MessageBox.Show("Se ha agregado el celular exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);   
             }
@@ -73,7 +78,7 @@ namespace Formularios
             int auxInt;
             double auxDouble;
             
-            if(int.TryParse(txtId.Text, out auxInt) && double.TryParse(txtPrecio.Text, out auxDouble) && int.TryParse(txtMemoria.Text, out auxInt))
+            if(int.TryParse(txtId.Text, out auxInt) && double.TryParse(txtPrecio.Text, out auxDouble) && int.TryParse(txtMemoria.Text, out auxInt) && cmbLiberado is not null && cmbMarca is not null && cmbResolucion is not null && cmbSistema is not null && cmbTag is not null)
             {
                 return true;
             } 
