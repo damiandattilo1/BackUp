@@ -66,9 +66,17 @@ namespace Biblioteca
             sb.AppendLine($"Sistema Operativo: {this.SistemaOperativo.ToString()}");
             sb.AppendLine($"Disco: {this.Disco.ToString()}");
 
+            sb.Append(base.DatosExtra());
+
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Sobrecarga de operador == Dos pc son iguales si sus productos y sus modelos son iguales
+        /// </summary>
+        /// <param name="pc1"></param>
+        /// <param name="pc2"></param>
+        /// <returns></returns>
         public static bool operator ==(PC pc1, PC pc2)
         {
             if(pc1 is not null && pc2 is not null)
@@ -83,6 +91,11 @@ namespace Biblioteca
             return !(pc1 == pc2);
         }
 
+        /// <summary>
+        /// Polimorfismo de Equals
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             bool retorno = false;

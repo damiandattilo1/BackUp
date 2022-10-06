@@ -13,6 +13,7 @@ namespace Biblioteca
         /// </summary>
         private List<Producto> productos;
         private int capacidadMaxima;
+        private static string nombreComercio;
 
         /// <summary>
         /// Propiedades
@@ -29,9 +30,23 @@ namespace Biblioteca
             set { capacidadMaxima = value; }
         }
 
+        public string NombreComercio
+        {
+            get { return nombreComercio; }
+        }
+
+        /// <summary>
+        /// Inicializa el nombre del comercio
+        /// </summary>
+        static Deposito()
+        {
+            nombreComercio = "Electronica Ultra";
+        }
+
         /// <summary>
         /// Constructor privado que inicializa la lista de productos
         /// </summary>
+       
         private Deposito()
         {
             this.productos = new List<Producto>();
@@ -82,13 +97,32 @@ namespace Biblioteca
             return existe;
         }
 
-        public string GenerarFactura(Producto p)
+        /// <summary>
+        /// Retorna si el producto recibido por parametro ya se encuentra en el deposito
+        /// </summary>
+        /// <param name="deposito"></param>
+        /// <param name="producto"></param>
+        /// <returns></returns>
+        public static bool operator ==(Deposito deposito, Producto producto)
         {
-            StringBuilder sb = new StringBuilder();
+            if(deposito is not null && producto is not null)
+            {
+                foreach(Producto item in deposito.Productos)
+                {
+                    if (item.Equals(producto))
+                    {
+                        return true;
+                    }
+                }
+            }
 
-
-
-            return sb.ToString();
+            return false;
         }
+        
+        public static bool operator !=(Deposito deposito, Producto producto)
+        {
+            return !(deposito == producto);
+        }
+
     }
 }

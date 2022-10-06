@@ -40,6 +40,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// evento del boton vender que efectua la venta si hay stock
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVender_Click(object sender, EventArgs e)
         {
             Producto producto = lstProductos.SelectedItem as Producto;

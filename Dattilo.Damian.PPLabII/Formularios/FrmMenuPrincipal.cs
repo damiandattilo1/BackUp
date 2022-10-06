@@ -20,6 +20,11 @@ namespace Formularios
             this.deposito = deposito;
         }
 
+        /// <summary>
+        /// LLEva al dueno al inventario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnInventario_Click(object sender, EventArgs e)
         {
             FrmAdminInventario frmAdminInventario = new FrmAdminInventario(deposito);
@@ -28,6 +33,11 @@ namespace Formularios
             this.Show();
         }
 
+        /// <summary>
+        /// lleva al dueno al form de venta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVenta_Click(object sender, EventArgs e)
         {
             FrmVenta formVenta = new FrmVenta(deposito, true);

@@ -66,6 +66,7 @@
             // 
             // cmbMarca
             // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(170, 175);
             this.cmbMarca.Name = "cmbMarca";
@@ -151,6 +152,7 @@
             // 
             // cmbSistema
             // 
+            this.cmbSistema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSistema.FormattingEnabled = true;
             this.cmbSistema.Location = new System.Drawing.Point(795, 174);
             this.cmbSistema.Name = "cmbSistema";
@@ -159,6 +161,7 @@
             // 
             // cmbResolucion
             // 
+            this.cmbResolucion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbResolucion.FormattingEnabled = true;
             this.cmbResolucion.Location = new System.Drawing.Point(969, 174);
             this.cmbResolucion.Name = "cmbResolucion";
@@ -177,6 +180,7 @@
             // 
             // cmbLiberado
             // 
+            this.cmbLiberado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLiberado.FormattingEnabled = true;
             this.cmbLiberado.Location = new System.Drawing.Point(362, 300);
             this.cmbLiberado.Name = "cmbLiberado";
@@ -194,6 +198,7 @@
             // 
             // cmbTag
             // 
+            this.cmbTag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTag.FormattingEnabled = true;
             this.cmbTag.Location = new System.Drawing.Point(710, 289);
             this.cmbTag.Name = "cmbTag";

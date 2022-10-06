@@ -92,14 +92,28 @@ namespace Biblioteca
             sb.AppendLine($"Id: {this.Id} ");
             sb.AppendLine($"Marca: {this.Marca} ");
             sb.AppendLine($"Modelo: {this.Modelo} ");
-            sb.AppendLine($"Precio: {this.Precio} ");
-            sb.AppendLine($"Stock: {this.Stock} ");
 
             return sb.ToString();
         }
 
         /// <summary>
-        /// Sobrecarga del operador == Dos productos son iguales si tienen el mismo id y el mismo modelo
+        /// Agrega datos de precio, stock y tags al ToString de cada herencia
+        /// </summary>
+        /// <returns></returns>
+
+        public string DatosExtra()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Precio: {this.Precio} ");
+            sb.AppendLine($"Stock: {this.Stock} ");
+            sb.AppendLine($"Tags: {this.Tag}");
+
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Sobrecarga del operador == Dos productos son iguales si tienen el mismo id
         /// </summary>
         /// <param name="p1"></param> Producto 1
         /// <param name="p2"></param> Producto 2
@@ -116,6 +130,21 @@ namespace Biblioteca
         public static bool operator !=(Producto p1, Producto p2)
         {
             return !(p1 == p2);
+        }
+
+        /// <summary>
+        /// Polimorfismo de Equals
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+            if (obj is not null && obj is Deposito)
+            {
+                retorno = ((Deposito)obj == this);
+            }
+            return retorno;
         }
 
         /// <summary>
@@ -139,6 +168,12 @@ namespace Biblioteca
             }
             return false;
         }
+
+        /// <summary>
+        /// Busca la instancia de producto en la lista de un deposito
+        /// </summary>
+        /// <param name="deposito"></param>
+        /// <returns></returns>
 
         private Producto BuscarProducto(Deposito deposito)
         {

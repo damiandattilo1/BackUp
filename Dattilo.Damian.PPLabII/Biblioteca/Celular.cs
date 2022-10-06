@@ -46,7 +46,6 @@ namespace Biblioteca
             set { esLiberado = value; }
         }
 
-        
 
         /// <summary>
         /// Constructor publico de celular que reutiliza el constructor de la clase base
@@ -54,8 +53,11 @@ namespace Biblioteca
         /// <param name="id"></param>
         /// <param name="marca"></param>
         /// <param name="modelo"></param>
+        /// <param name="tag"></param>
         /// <param name="precio"></param>
         /// <param name="memoria"></param>
+        /// <param name="sistemaOperativo"></param>
+        /// <param name="resolucionCamara"></param>
         /// <param name="esLiberado"></param>
         public Celular(int id, eMarca marca, string modelo, eTag tag, double precio, int memoria,eSistemaCelular sistemaOperativo, eResolucionCamara resolucionCamara, bool esLiberado) : base(id, marca, modelo,tag, precio)
         {
@@ -88,9 +90,17 @@ namespace Biblioteca
                 sb.AppendLine("Si");
             }
 
+            sb.Append(base.DatosExtra());
+
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Sobrecarga de operador == Dos celulares son iguales si sus productos y sus modelos son iguales
+        /// </summary>
+        /// <param name="celular1"></param>
+        /// <param name="celular2"></param>
+        /// <returns></returns>
         public static bool operator ==(Celular celular1, Celular celular2)
         {
             if (celular1 is not null && celular2 is not null)
@@ -105,6 +115,11 @@ namespace Biblioteca
             return !(celular1 == celular2);
         }
 
+        /// <summary>
+        /// Polimorfismo de Equals
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             bool retorno = false;

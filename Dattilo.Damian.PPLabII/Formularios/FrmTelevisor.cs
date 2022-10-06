@@ -21,7 +21,11 @@ namespace Formularios
             this.deposito = deposito;
         }
 
-
+        /// <summary>
+        /// agrega el producto previa validacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             bool esSmart;
@@ -36,8 +40,17 @@ namespace Formularios
             if (Validar())
             {
                 Televisor televisor = new Televisor(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txtPulgadas.Text), (eSistemaTV)cmbSistema.SelectedItem, (eResolucion)cmbResolucion.SelectedItem, esSmart);
-                deposito = deposito + televisor;
-                MessageBox.Show("Se ha agregado el televisor exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (deposito == televisor)
+                {
+                    MessageBox.Show("El televisor ya esta ingresado en el comercio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    deposito = deposito + televisor;
+                    MessageBox.Show("Se ha agregado el televisor exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+
 
             }
             else
@@ -60,6 +73,11 @@ namespace Formularios
             return false;
         }
 
+        /// <summary>
+        /// evento load que inicializa todos los comboBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmTelevisor_Load(object sender, EventArgs e)
         {
             cmbMarca.Items.Clear();

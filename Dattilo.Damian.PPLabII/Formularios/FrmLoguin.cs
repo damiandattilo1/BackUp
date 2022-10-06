@@ -50,12 +50,23 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Da entrada al dueno si coinciden los datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void btnDueño_Click(object sender, EventArgs e)
         {
             txtUsuario.Text = "dueño@gmail.com";
             txtPassword.Text = "123utn456";
         }
 
+        /// <summary>
+        /// da entrada al vendedor si coinciden los datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVendedor_Click(object sender, EventArgs e)
         {
             txtUsuario.Text = "vendedor@vende.com";

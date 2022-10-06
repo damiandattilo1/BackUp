@@ -87,9 +87,17 @@ namespace Biblioteca
                 sb.AppendLine("No");
             }
 
+            sb.Append(base.DatosExtra());
+
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Sobrecarga de operador == Dos televisores son iguales si sus productos y modelos son iguales
+        /// </summary>
+        /// <param name="t1"></param>
+        /// <param name="t2"></param>
+        /// <returns></returns>
         public static bool operator ==(Televisor t1, Televisor t2)
         {
             if(t1 is not null && t2 is not null)
@@ -104,6 +112,11 @@ namespace Biblioteca
             return !(t1 == t2);
         }
 
+        /// <summary>
+        /// Polimorfismo de Equals
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             bool retorno = false;

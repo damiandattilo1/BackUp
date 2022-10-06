@@ -20,6 +20,11 @@ namespace Formularios
             this.deposito = deposito;
         }
 
+        /// <summary>
+        /// Evento load que inicializa los comboBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmCelular_Load(object sender, EventArgs e)
         {
             cmbMarca.Items.Clear();
@@ -50,6 +55,11 @@ namespace Formularios
 
         }
 
+        /// <summary>
+        /// Agrega el producto nuevo si este no existe previamente en la lista
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             bool liberado;
@@ -64,8 +74,17 @@ namespace Formularios
             if (Validar())
             {
                 Celular celular = new Celular(int.Parse(txtId.Text),(eMarca) cmbMarca.SelectedItem, txtModelo.Text,(eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text),int.Parse(txtMemoria.Text), (eSistemaCelular)cmbSistema.SelectedItem,(eResolucionCamara) cmbResolucion.SelectedItem, liberado);
-                deposito = deposito + celular;
-                MessageBox.Show("Se ha agregado el celular exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);   
+                if(deposito == celular)
+                {
+                    MessageBox.Show("El celular ya esta ingresado en el comercio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    deposito = deposito + celular;
+                    MessageBox.Show("Se ha agregado el celular exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);   
+
+                }
+                
             }
             else
             {
@@ -73,6 +92,10 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Valida que todos los campos del formulario esten completos
+        /// </summary>
+        /// <returns></returns>
         private bool Validar()
         {
             int auxInt;

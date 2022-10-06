@@ -11,6 +11,9 @@ using Biblioteca;
 
 namespace Formularios
 {
+    /// <summary>
+    /// Formulario que permite elegir que tipo de producto agregar
+    /// </summary>
     public partial class FrmNuevoProducto : Form
     {
         private Deposito deposito;
